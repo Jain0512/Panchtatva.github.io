@@ -23,6 +23,7 @@ header {
 
 .group-photo img {
     width: 60%;
+    max-width: 500px;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     margin-bottom: 20px;
@@ -46,6 +47,7 @@ header {
     justify-content: center;
     gap: 20px;
     width: 80%;
+    flex-wrap: wrap;
 }
 
 .member {
@@ -65,8 +67,8 @@ header {
 }
 
 .member img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     margin-bottom: 10px;
     border: 4px solid #4facfe;
@@ -85,3 +87,26 @@ header {
     }
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 20px;
+        padding: 15px;
+    }
+
+    .member {
+        width: 90%;
+    }
+
+    .member img {
+        width: 130px;
+        height: 130px;
+    }
+}
